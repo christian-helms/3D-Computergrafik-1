@@ -1,0 +1,8 @@
+{
+    "name": "Graustufen",
+    "type": "code",
+    "renderer": "GrayscaleRenderer",
+    "files": [
+        "source/exercises/practical/grayscale/code/grayscale.ts"
+    ]
+}

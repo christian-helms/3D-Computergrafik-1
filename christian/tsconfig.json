@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "outDir": "./build/",
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es2019",
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "lib": [
+            "dom",
+            "es2019"
+        ],
+    },
+    "include": [
+        "source/common/code/*.ts",
+        "source/exercises/demos/**/*.ts",
+        "source/exercises/practical/**/*.ts"
+    ]
+}

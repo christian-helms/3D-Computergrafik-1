@@ -1,0 +1,8 @@
+{
+    "name": "Metaballs",
+    "type": "code",
+    "renderer": "MetaballsRenderer",
+    "files": [
+        "source/exercises/practical/metaballs/code/metaballs.frag"
+    ]
+}

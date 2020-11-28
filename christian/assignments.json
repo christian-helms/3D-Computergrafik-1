@@ -1,0 +1,23 @@
+{
+    "lecture": "Übungen 3D-Computergrafik I",
+    "assignments": [
+        {
+            "name": "Übung 1",
+            "id": "assignment01",
+            "exercises": [
+                "practical/grayscale",
+                "practical/cpuGpu",
+                "practical/metaballs"
+            ]
+        },
+        {
+            "name": "Intro",
+            "id": "demo01",
+            "exercises": [
+                "demos/tsIntro",
+                "demos/tsGlslIntro",
+                "demos/glslIntro"
+            ]
+        }
+    ]
+}

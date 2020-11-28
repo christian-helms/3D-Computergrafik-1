@@ -1,0 +1,6 @@
+{
+    "name": "TS Intro",
+    "type": "code",
+    "renderer": "IntroRenderer",
+    "files": []
+}

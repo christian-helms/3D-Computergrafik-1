@@ -1,0 +1,11 @@
+block vars
+block title
+    title= exercise.name
+html
+    include partials/head.pug
+
+    body.bg-light
+        include partials/navbar.pug
+        block content
+        include partials/info.pug
+        include partials/footer.pug

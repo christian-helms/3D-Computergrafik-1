@@ -1,0 +1,5 @@
+.row.px-3.pt-3
+    h3= assignment.name
+.row
+    each exercise in assignment.exercises
+        include exercise_card.pug

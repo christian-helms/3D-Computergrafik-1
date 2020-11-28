@@ -1,0 +1,16 @@
+.container
+    ul#info-nav.nav.nav-tabs.mt-4.border-0
+        li.nav-item
+            a#description-tab.nav-link.active( data-toggle='tab' href='#description' role='tab' aria-controls='description' aria-selected='true') Aufgabenstellung
+        li#webgl-status-nav-item.nav-item.d-none
+            a#webgl-status-tab.nav-link( data-toggle='tab' href='#webgl-status' role='tab' aria-controls='webgl-status' aria-selected='true') WebGL-Status
+    .tab-content.border.bg-white
+        #description.tab-pane.fade.show.active(role='tabpanel' aria-labeledby='description-tab')
+            .m-3
+                h3 Zusammenfassung
+                p!= exercise.summaryText
+                h3 Aufgabenstellung
+                p!= exercise.taskText
+        #webgl-status.tab-pane.fade(role='tabpanel' aria-labeledby='webgl-status-tab')
+            div.card.card-body.border-0
+                code#webgl-context.code.code-body.text-secondary
