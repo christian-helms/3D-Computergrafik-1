@@ -1,0 +1,14 @@
+{
+    "lecture": "Übungen 3D-Computergrafik I",
+    "assignments": [
+        {
+            "name": "Intro",
+            "id": "demo01",
+            "exercises": [
+                "demos/tsIntro",
+                "demos/tsGlslIntro",
+                "demos/glslIntro"
+            ]
+        }
+    ]
+}

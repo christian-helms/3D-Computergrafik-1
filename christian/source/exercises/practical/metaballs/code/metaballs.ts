@@ -24,7 +24,7 @@ export class MetaballsRenderer extends Renderer {
     protected _uRadiusFactor: WebGLUniformLocation;
 
     // number of metaballs ;P
-    protected _numberOfMetaballs = 1000;
+    protected _numberOfMetaballs = 10;
     // meatballs: 3 floats per metaball (x, y, radius)
     protected _metaballs: Float32Array;
     // movement directions
