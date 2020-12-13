@@ -1,0 +1,9 @@
+{
+    "name": "LUTs",
+    "type": "code",
+    "renderer": "LutRenderer",
+    "files": [
+        "source/exercises/practical/colorLut/code/export.frag",
+        "source/exercises/practical/colorLut/code/apply.frag"
+    ]
+}

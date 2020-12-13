@@ -8,9 +8,9 @@ export function laplace(): void {
     // TODO: set correct kernel
     // kernel for weighting the neighboring pixels
     const kernel = [
-        [0, 1, 0],
-        [1, -4, 1],
-        [0, 1, 0],
+        [1, 1, 1],
+        [1, -8, 1],
+        [1, 1, 1],
     ];
 
     // loop over all pixels
@@ -28,7 +28,7 @@ export function laplace(): void {
                 if (sampleX < 0 || sampleX >= this._imageWidth) {
                     continue;
                 }
-                // loop over the blur kernel in y direction
+                // loop over kernel in y direction
                 for (let j = -1; j <= 1; j++) {
                     // calculate y index for sample
                     const sampleY = y + j;

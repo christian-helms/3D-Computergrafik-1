@@ -13,9 +13,13 @@ layout(location = 0) out vec4 fragColor;
 in vec2 v_uv;
 // TODO: set correct kernel
 // kernel for weighting the neighboring pixels
-const mat3 kernel = mat3(0, 1, 0, // first column
-                         1, -4, 1,  // second column
-                         0, 1, 0    // third column
+// const mat3 kernel = mat3(0, 1, 0, // first column
+//                          1, -4, 1,  // second column
+//                          0, 1, 0    // third column
+// );
+const mat3 kernel = mat3(1, 1, 1, // first column
+                         1, -8, 1,  // second column
+                         1, 1, 1    // third column
 );
 
 void main(void) {

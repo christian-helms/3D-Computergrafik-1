@@ -128,7 +128,7 @@ export class GrayscaleRenderer extends CpuRenderer {
     protected threshold(img: Jimp): void {
         this.weightedGray(img);
         this.toBWPicture(img, (pixel) => {
-            return (pixel.r > 100) ? 255 : 0;
+            return (pixel.r > 127) ? 255 : 0;
         });
     }
 
@@ -146,23 +146,23 @@ export class GrayscaleRenderer extends CpuRenderer {
         for (let y = 0; y < img.getHeight(); y++)
             for (let x = 0; x < img.getWidth(); x++) {
                 const newpixel = (brightnesses[y * img.getWidth() + x] >
-                    122) ? 255 : 0;
+                    127) ? 255 : 0;
                 const quanterror = brightnesses[y * img.getWidth() + x] -
                     newpixel;
                 const ncolor = Jimp.rgbaToInt(newpixel,
                     newpixel, newpixel, 255);
                 img.setPixelColor(ncolor, x, y);
 
-                if (img.getWidth() - x >= 1)
+                if (y + 1 < img.getHeight())
                     brightnesses[(y + 1) * img.getWidth() + x] +=
                         7 * quanterror / 16;
-                if (img.getHeight() - y >= 1)
+                if (x + 1 < img.getWidth())
                     brightnesses[y * img.getWidth() + x + 1] +=
                         5 * quanterror / 16;
-                if (img.getWidth() - x >= 1 && img.getHeight() - y >= 1)
+                if (x + 1 < img.getWidth() && y + 1 < img.getHeight())
                     brightnesses[(y + 1) * img.getWidth() + (x + 1)] +=
                         quanterror / 16;
-                if (x - img.getWidth() >= 1 && img.getHeight() - y >= 1)
+                if (x - 1 >= 0 && y + 1 < img.getHeight())
                     brightnesses[(y + 1) * img.getWidth() + x - 1] +=
                         3 * quanterror / 16;
             }
