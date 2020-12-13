@@ -1,0 +1,9 @@
+{
+    "name": "Bonus: Weihnachtsbaum",
+    "type": "code",
+    "renderer": "XmasTreeRenderer",
+    "files": [
+        "source/exercises/practical/xmasTree/code/xmasTree.ts",
+        "source/exercises/practical/xmasTree/code/xmasTree.frag"
+    ]
+}

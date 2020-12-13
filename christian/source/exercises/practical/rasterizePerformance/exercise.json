@@ -1,0 +1,9 @@
+{
+    "name": "Rasterisierungs-Performance",
+    "type": "code",
+    "renderer": "PerformanceRenderer",
+    "files": [
+        "source/exercises/practical/rasterizePerformance/code/triangleFanGeometry.ts",
+        "source/exercises/practical/rasterizePerformance/code/result.txt"
+    ]
+}

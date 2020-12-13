@@ -1,0 +1,125 @@
+For a bonus point: Enter your benchmark summary and WebGL info here.
+
+all benchmarks done! summary:
+performanceRenderer.ts:232 w10 f10 i1000
+r256 v3 t1223.2349999831058
+r256 v4 t991.3250000099652
+r256 v5 t952.8149999969173
+r256 v6 t922.4300000059884
+r256 v7 t920.9350000019185
+r256 v9 t930.8499999751803
+r256 v11 t939.4449999963399
+r256 v15 t977.8700000024401
+r256 v20 t1017.6499999943189
+r256 v35 t1029.4649999996182
+r512 v3 t3962.7349999791477
+r512 v4 t3141.184999985853
+r512 v5 t2949.880000000121
+r512 v6 t2865.045000013197
+r512 v7 t2818.520000000717
+r512 v9 t2778.794999991078
+r512 v11 t2770.155000005616
+r512 v15 t2747.1849999856204
+r512 v20 t2860.0699999951757
+r512 v35 t2899.8000000137836
+
+
+BACKEND (GLOPERATE) ---------------------------- webgl2
+CONTEXT_HASH (GLOPERATE) ----------------------- 2c4gdp
+
+RENDERER --------------------------------------- WebKit WebGL
+VENDOR ----------------------------------------- WebKit
+VERSION ---------------------------------------- WebGL 2.0 (OpenGL ES 3.0 Chromium)
+SHADING_LANGUAGE_VERSION ----------------------- WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)
+
+UNMASKED_VENDOR_WEBGL -------------------------- Google Inc.
+UNMASKED_RENDERER_WEBGL ------------------------ Google SwiftShader
+
+ALPHA (ATTRIBUTE) ------------------------------ true
+ANTIALIAS (ATTRIBUTE) -------------------------- false
+DEPTH (ATTRIBUTE) ------------------------------ true
+FAIL_IF_MAJOR_PERFORMANCE_CAVEAT (ATTRIBUTE) --- false
+PREMULTIPLIED_ALPHA (ATTRIBUTE) ---------------- true
+PRESERVE_DRAWING_BUFFER (ATTRIBUTE) ------------ false
+STENCIL (ATTRIBUTE) ---------------------------- false
+
+DEVICE_PIXEL_RATIO (WINDOW) -------------------- 1
+
+APP_CODE_NAME (NAVIGATOR) ---------------------- Mozilla
+APP_NAME (NAVIGATOR) --------------------------- Netscape
+APP_VERSION (NAVIGATOR) ------------------------ 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+PLATFORM (NAVIGATOR) --------------------------- Win32
+HARDWARE_CONCURRENCY (NAVIGATOR) --------------- Mozilla
+VENDOR (NAVIGATOR) ----------------------------- Google Inc.
+VENDOR_SUB (NAVIGATOR) -------------------------
+
+MAX_COMBINED_TEXTURE_IMAGE_UNITS --------------- 32
+MAX_CUBE_MAP_TEXTURE_SIZE ---------------------- 8192
+MAX_FRAGMENT_UNIFORM_VECTORS ------------------- 261
+MAX_RENDERBUFFER_SIZE -------------------------- 8192
+MAX_TEXTURE_IMAGE_UNITS ------------------------ 16
+MAX_TEXTURE_SIZE ------------------------------- 8192
+MAX_VARYING_VECTORS ---------------------------- 32
+MAX_VERTEX_ATTRIBS ----------------------------- 32
+MAX_VERTEX_TEXTURE_IMAGE_UNITS ----------------- 16
+MAX_VERTEX_UNIFORM_VECTORS --------------------- 256
+MAX_VIEWPORT_DIMS (WIDTH) ---------------------- 8192
+MAX_VIEWPORT_DIMS (HEIGHT) --------------------- 8192
+
+MAX_3D_TEXTURE_SIZE ---------------------------- 8192
+MAX_ARRAY_TEXTURE_LAYERS ----------------------- 8192
+MAX_CLIENT_WAIT_TIMEOUT_WEBGL ------------------ 0
+MAX_COLOR_ATTACHMENTS -------------------------- 8
+MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS ------- 50208
+MAX_COMBINED_UNIFORM_BLOCKS -------------------- 24
+MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS --------- 50188
+MAX_DRAW_BUFFERS ------------------------------- 8
+MAX_ELEMENT_INDEX ------------------------------ 2147483647
+MAX_ELEMENTS_INDICES --------------------------- 2147483647
+MAX_ELEMENTS_VERTICES -------------------------- 2147483647
+MAX_FRAGMENT_INPUT_COMPONENTS ------------------ 60
+MAX_FRAGMENT_UNIFORM_BLOCKS -------------------- 12
+MAX_FRAGMENT_UNIFORM_COMPONENTS ---------------- 1056
+MAX_PROGRAM_TEXEL_OFFSET ----------------------- 7
+MAX_SAMPLES ------------------------------------ 4
+MAX_SERVER_WAIT_TIMEOUT ------------------------ 0
+MAX_TEXTURE_LOD_BIAS --------------------------- 12
+MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS -- 64
+MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS -------- 4
+MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS ----- 64
+MAX_UNIFORM_BLOCK_SIZE ------------------------- 16384
+MAX_UNIFORM_BUFFER_BINDINGS -------------------- 24
+MAX_VARYING_COMPONENTS ------------------------- 128
+MAX_VERTEX_OUTPUT_COMPONENTS ------------------- 64
+MAX_VERTEX_UNIFORM_BLOCKS ---------------------- 12
+MAX_VERTEX_UNIFORM_COMPONENTS ------------------ 1036
+MIN_PROGRAM_TEXEL_OFFSET ----------------------- -8
+
+ANGLE_instanced_arrays (default) --------------- ok
+EXT_blend_minmax (default) --------------------- ok
+EXT_frag_depth (default) ----------------------- ok
+EXT_sRGB (default) ----------------------------- ok
+EXT_shader_texture_lod (default) --------------- ok
+OES_element_index_uint (default) --------------- ok
+OES_standard_derivatives (default) ------------- ok
+OES_texture_float (default) -------------------- ok
+OES_texture_half_float (default) --------------- ok
+OES_vertex_array_object (default) -------------- ok
+WEBGL_depth_texture (default) ------------------ ok
+WEBGL_draw_buffers (default) ------------------- ok
+
+EXT_color_buffer_float ------------------------- ok
+EXT_disjoint_timer_query_webgl2 ---------------- na
+EXT_texture_filter_anisotropic ----------------- ok
+OES_texture_float_linear ----------------------- ok
+OES_texture_half_float_linear ------------------ na
+WEBGL_compressed_texture_astc ------------------ na
+WEBGL_compressed_texture_atc ------------------- na
+WEBGL_compressed_texture_etc ------------------- ok
+WEBGL_compressed_texture_etc1 ------------------ ok
+WEBGL_compressed_texture_pvrtc ----------------- na
+WEBGL_compressed_texture_s3tc ------------------ ok
+WEBGL_compressed_texture_s3tc_srgb ------------- na
+WEBGL_debug_renderer_info ---------------------- ok
+WEBGL_debug_shaders ---------------------------- ok
+WEBGL_lose_context ----------------------------- ok
