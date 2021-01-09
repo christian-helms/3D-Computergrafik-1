@@ -1,0 +1,1 @@
+Implementieren Sie Rotation mit unterschiedlichen Interpolationsverfahren.

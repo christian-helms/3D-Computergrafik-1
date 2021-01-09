@@ -1,0 +1,12 @@
+{
+    "name": "Rotation",
+    "type": "code",
+    "renderer": "RotationRenderer",
+    "files": [
+        "source/exercises/practical/rotation/code/lerp.ts",
+        "source/exercises/practical/rotation/code/interpolateMatrix.ts",
+        "source/exercises/practical/rotation/code/interpolateEuler.ts",
+        "source/exercises/practical/rotation/code/slerp.ts",
+        "source/exercises/practical/rotation/code/interpolateQuaternion.ts"
+    ]
+}
