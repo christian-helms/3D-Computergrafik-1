@@ -1,0 +1,109 @@
+[
+    {
+        "target": "cornell-box",
+        "title": "Cornell Box",
+        "authors": [
+            "cgcostume",
+            "chistopher"
+        ],
+        "caption": "Progressive path tracing of the classic Cornell Box in GLSL for WebGL as well as WebGL2.",
+        "disabled": false
+    },
+    {
+        "target": "gltf-renderer",
+        "title": "glTF Support",
+        "authors": [
+            "bwasty",
+            "p-otto"
+        ],
+        "caption": "glTF support with physical-based rendering and multi-frame sampling.",
+        "disabled": false
+    },
+    {
+        "target": "volume-vis",
+        "title": "Volume Visualizer",
+        "authors": [
+            "tobi",
+            "sbusch42",
+            "cgcostume"
+        ],
+        "caption": "Basic volume rendering using ray-marching with simple shading, coloring and more.",
+        "disabled": true
+    },
+    {
+        "target": "openll-showcase",
+        "title": "OpenLL Text Rendering",
+        "authors": [
+            "anne-gropler",
+            "cgcostume"
+        ],
+        "caption": "High-performance, text placement, typesetting, and rendering of in 2D and 3D.",
+        "disabled": true
+    },
+    {
+        "target": "progressive-lighting",
+        "title": "Progressive Lighting",
+        "authors": [
+            "p-otto"
+        ],
+        "caption": "PBR renderer showcasing different methods of physically plausible lighting.",
+        "disabled": false
+    },
+    {
+        "target": "point-cloud",
+        "title": "Point Cloud",
+        "authors": [
+            "cgcostume"
+        ],
+        "caption": "Particle rendering for interactive visual display of an animated point cloud.",
+        "disabled": false
+    },
+    {
+        "target": "treemap",
+        "title": "2.5D Treemap",
+        "authors": [
+            "cgcostume",
+            "bwasty",
+            "scheibel"
+        ],
+        "caption": "Interactive visualization of tree-structured, massive data for software analytics.",
+        "disabled": true
+    },
+    {
+        "target": "metaballs",
+        "title": "Metaballs",
+        "authors": [
+            "cgcostume",
+            "bwasty"
+        ],
+        "caption": "Raymarched Metaballs with 3D force field, reflections, and some post processing.",
+        "disabled": true
+    },
+    {
+        "target": "cubescape",
+        "title": "Landscape of Cubes",
+        "authors": [
+            "cgcostume"
+        ],
+        "caption": "WebGL port of the initial glbinding cubescape demo using instanced rendering.",
+        "disabled": false
+    },
+    {
+        "target": "webxr-support",
+        "title": "WebXR Support",
+        "authors": [
+            "bwasty"
+        ],
+        "caption": "Simple demo showcasing how WebXR can be utilized with webgl-operate.",
+        "disabled": true
+    },
+    {
+        "target": "eye-tracking",
+        "title": "Eye Tracker Demo",
+        "authors": [
+            "MartinBuessemeyer",
+            "cgcostume"
+        ],
+        "caption": "Simple demo showing eye tracking."
+    }
+]
