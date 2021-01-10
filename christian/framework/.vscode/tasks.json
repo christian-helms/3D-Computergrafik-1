@@ -1,0 +1,50 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "init",
+            "problemMatcher": [],
+            "label": "install: Initializes the framework."
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "build: Builds pages once."
+        },
+        {
+            "type": "npm",
+            "script": "debug",
+            "problemMatcher": [],
+            "label": "debug: Starts dev server. Use debugger to open page."
+        },
+        {
+            "type": "npm",
+            "script": "start",
+            "problemMatcher": [],
+            "label": "start: Starts dev server and opens page in browser."
+        },
+        {
+            "type": "npm",
+            "script": "import",
+            "problemMatcher": [],
+            "label": "import: Import the most recent assignment package."
+        },
+        {
+            "type": "npm",
+            "script": "export",
+            "problemMatcher": [],
+            "label": "export: Export the last assignment as submission package."
+        },
+        {
+            "type": "npm",
+            "script": "packAssignment",
+            "problemMatcher": [],
+            "label": "[TA] pack assignment: Export an assignment package."
+        }
+    ]
+}
