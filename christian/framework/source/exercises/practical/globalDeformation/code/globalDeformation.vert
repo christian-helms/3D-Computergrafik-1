@@ -60,12 +60,9 @@ vec4 mold(vec4 vertex, float factor)
     vec2 z = vec2(0.0, 1.0);
 
     float angle = acos(dot(v, z) / (length(v) * length(z)));
-    float angle_factor = angle / (M_PI / 2.0);
-
-    vertex.z -= clamp(sign(vertex.z) * angle_factor * factor * u_objectDimensions.z / 2.0, 
+    float angle_factor = angle / (M_PI / 2.0); vertex.z -= clamp(sign(vertex.z) * angle_factor * factor * u_objectDimensions.z /* / 2.0 */, 
                       -abs(vertex.z), abs(vertex.z));
-    ////////////////////////////////////////////////////////////////////////////
-    vertex /= vertex.w;
+    //////////////////////////////////////////////////////////////////////
     return vertex;
 }
 
