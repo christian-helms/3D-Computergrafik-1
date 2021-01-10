@@ -1,0 +1,16 @@
+nav.navbar.fixed-top.navbar-dark.bg-dark
+    .container
+        a(href='index.html')
+            .navbar-brand
+                img(src='img/logo/logo_white.svg' width='30' height='30')
+            .navbar-text= lecture
+        .dropdown
+            a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Aufgaben
+            .dropdown-menu.dropdown-menu-right.bg-dark(aria-labelledby='dropdownMenuLink')
+                each assignment, index in assignments
+                    h6.dropdown-header= assignment.name
+                    each exercise in assignment.exercises
+                        a.dropdown-item(href=exercise.id + '.html')= exercise.name
+                    if index < assignments.length - 1
+                        .dropdown-divider
+.py-5

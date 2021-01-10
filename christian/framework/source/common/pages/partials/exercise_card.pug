@@ -1,0 +1,7 @@
+.col-md-6.col-lg-4.px-3.pb-3
+    .card.h-100
+        img.card-img-top.exercise-thumbnail(src=exercise.thumbnail)
+        .card-body.d-flex.flex-column
+            h5.card-title= exercise.name
+            p.card-text!= exercise.summaryText
+            a.btn.btn-primary.mt-auto(href=exercise.id + '.html') Los geht's

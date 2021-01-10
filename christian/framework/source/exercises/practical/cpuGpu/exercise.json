@@ -1,0 +1,11 @@
+{
+    "name": "CPU vs. GPU",
+    "type": "code",
+    "renderer": "CpuGpuRenderer",
+    "files": [
+        "source/exercises/practical/cpuGpu/code/blur.ts",
+        "source/exercises/practical/cpuGpu/code/blur.frag",
+        "source/exercises/practical/cpuGpu/code/laplace.ts",
+        "source/exercises/practical/cpuGpu/code/laplace.frag"
+    ]
+}

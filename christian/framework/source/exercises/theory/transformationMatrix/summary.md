@@ -1,0 +1,1 @@
+Geben Sie die Transformationsmatrizen für die gegebenen Objekte an.

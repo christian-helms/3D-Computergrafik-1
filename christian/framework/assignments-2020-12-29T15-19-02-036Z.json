@@ -1,0 +1,14 @@
+{
+    "lecture": "Übungen 3D-Computergrafik I",
+    "assignments": [
+        {
+            "name": "Übung 3",
+            "id": "assignment03",
+            "exercises": [
+                "theory/transformationMatrix",
+                "practical/globalDeformation",
+                "practical/rotation"
+            ]
+        }
+    ]
+}

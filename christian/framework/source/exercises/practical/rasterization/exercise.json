@@ -1,0 +1,10 @@
+{
+    "name": "Rasterisierung",
+    "type": "code",
+    "renderer": "RasterizationRenderer",
+    "files": [
+        "source/exercises/practical/rasterization/code/fragmentbasedRasterization.frag",
+        "source/exercises/practical/rasterization/code/vertexbasedRasterization.frag",
+        "source/exercises/practical/rasterization/code/vertexbasedRasterization.vert"
+    ]
+}
