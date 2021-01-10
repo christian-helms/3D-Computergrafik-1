@@ -1,1 +1,0 @@
-Implementieren Sie in `grayscale.ts` die Funktionen `averageGray(...)`, `weightedGray(...)`, `threshold(...)` und `floydSteinberg(...)`.

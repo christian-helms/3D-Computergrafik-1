@@ -145,8 +145,7 @@ void main(void)
 {
     vec4 pos = u_model * a_position;
     v_position = vec3(pos.xyz) / pos.w;
-
-    vec4 vertex = applyDeformations(vec4(v_position, 1.0));
+vec4 vertex = applyDeformations(vec4(v_position, 1.0));
 
     if (checkFlag(HAS_NORMALS)) {
         if (checkFlag(HAS_TANGENTS)) {

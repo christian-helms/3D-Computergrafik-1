@@ -1,1 +1,0 @@
-Implementieren Sie Bildfaltungsoperationen Box-Weichzeichner und Laplace-Kantenerkennung sowohl CPU-, als auch GPU-seitig.

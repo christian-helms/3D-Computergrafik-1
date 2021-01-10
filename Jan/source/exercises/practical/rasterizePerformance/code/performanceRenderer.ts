@@ -67,7 +67,7 @@ export class PerformanceRenderer extends Renderer {
         3, 4, 5, 6, 7, 9, 11, 15, 20, 35
     ];
     // how many fans will be rendered each frame
-    protected _instances = 1e5;
+    protected _instances = 1e3;
     // how many frames will be rendered before each actual benchmark run
     protected _warmup = 1e1;
     // how many frames will be rendered for each benchmark run

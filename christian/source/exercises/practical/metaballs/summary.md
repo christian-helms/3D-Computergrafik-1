@@ -1,1 +1,0 @@
-Implementieren Sie die Metaball-Visualisierung im Fragmentshader `metaball.frag`.
