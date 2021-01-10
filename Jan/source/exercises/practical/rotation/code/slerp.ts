@@ -8,12 +8,15 @@ import { quat } from 'webgl-operate';
  * @param t - Interpolation factor
  * @returns The interpolated value
  */
+
 export function slerp(startQuat: quat, endQuat: quat, t: number): quat {
     const outputQuat = quat.create();
-    // TODO: implement slerp
-    // HINT: clamp the cosine value to [-1, 1],
-    // quat.dot can give faulty values if the input quaternions are the same
-
-    quat.slerp(outputQuat, startQuat, endQuat, t);
+    const alpha = Math.acos(Math.max(Math.min(1, quat.dot(startQuat, endQuat)), -1));
+    const startFactor = Math.sin((1 - t)*alpha);
+    const endFactor = Math.sin(t*alpha);
+    quat.scale(startQuat, startQuat, startFactor);
+    quat.scale(endQuat, endQuat, endFactor);
+    quat.add(outputQuat, startQuat, endQuat);
+    quat.scale(outputQuat, outputQuat, 1 / Math.sin(alpha)); 
     return outputQuat;
 }

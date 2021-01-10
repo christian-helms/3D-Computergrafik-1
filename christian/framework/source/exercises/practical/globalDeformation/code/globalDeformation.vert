@@ -60,7 +60,8 @@ vec4 mold(vec4 vertex, float factor)
     vec2 z = vec2(0.0, 1.0);
 
     float angle = acos(dot(v, z) / (length(v) * length(z)));
-    float angle_factor = angle / (M_PI / 2.0); vertex.z -= clamp(sign(vertex.z) * angle_factor * factor * u_objectDimensions.z /* / 2.0 */, 
+    float angle_factor = angle / (M_PI / 2.0); 
+    vertex.z -= clamp(sign(vertex.z) * angle_factor * factor * u_objectDimensions.z / 2.0, 
                       -abs(vertex.z), abs(vertex.z));
     //////////////////////////////////////////////////////////////////////
     return vertex;
@@ -105,12 +106,12 @@ vec4 twist(vec4 vertex, float angle)
 
     float y_fraction = (vertex.y + u_objectDimensions.y / 2.0) / u_objectDimensions.y;
     float angle_fraction = angle * y_fraction;
-    float x = vertex.x;
-    vertex.x = cos(angle_fraction) * vertex.x + sin(angle_fraction) * vertex.z;
-    vertex.z = cos(angle_fraction) * vertex.z - sin(angle_fraction) * x;
-    ////////////////////////////////////////////////////////////////////////////
+    mat4 twist = mat4(
+        cos(angle_fraction), 0.0, -sin(angle_fraction), 0.0, 0.0, 1.0, 0.0, 0.0,
+        sin(angle_fraction), 0.0, cos(angle_fraction), 0.0, 0.0, 0.0, 0.0, 1.0
+    );
 
-    return vertex;
+    return twist * vertex;
 }
 
 vec4 bend(vec4 vertex, float angle)
@@ -126,11 +127,13 @@ vec4 bend(vec4 vertex, float angle)
     // origin
     float y_fraction = (vertex.y + u_objectDimensions.y / 2.0) / u_objectDimensions.y;
     float angle_fraction = angle * y_fraction;
-    float x = vertex.x;
-    vertex.x = cos(angle_fraction) * vertex.x - sin(angle_fraction) * vertex.y;
-    vertex.y = sin(angle_fraction) * x + cos(angle_fraction) * vertex.y;
-    ////////////////////////////////////////////////////////////////////////////
-    return vertex;
+    mat4 twist = mat4(
+        cos(angle_fraction), sin(angle_fraction), 0.0, 0.0,
+        -sin(angle_fraction), cos(angle_fraction), 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0
+    );
+    return twist * vertex;
 }
 
 vec4 applyDeformations(vec4 vertex) {
