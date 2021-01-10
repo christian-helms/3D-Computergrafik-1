@@ -1,0 +1,8 @@
+{
+    "name": "Globale Deformationen",
+    "type": "code",
+    "renderer": "GlobalDeformationRenderer",
+    "files": [
+        "source/exercises/practical/globalDeformation/code/globalDeformation.vert"
+    ]
+}

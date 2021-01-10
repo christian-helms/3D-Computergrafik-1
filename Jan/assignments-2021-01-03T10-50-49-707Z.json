@@ -28,15 +28,6 @@
                 "practical/colorLut",
                 "practical/xmasTree"
             ]
-        },
-        {
-            "name": "Übung 3",
-            "id": "assignment03",
-            "exercises": [
-                "theory/transformationMatrix",
-                "practical/globalDeformation",
-                "practical/rotation"
-            ]
         }
     ]
 }

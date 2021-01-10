@@ -1,0 +1,1 @@
+Implementieren Sie die vier globalen Deformationen im Vertex-Shader.
