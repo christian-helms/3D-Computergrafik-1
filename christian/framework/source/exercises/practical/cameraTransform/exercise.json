@@ -1,0 +1,9 @@
+{
+    "name": "Kameratransformation",
+    "type": "code",
+    "renderer": "CameraTransformRenderer",
+    "files": [
+        "source/exercises/practical/cameraTransform/code/transformation.ts",
+        "source/exercises/practical/cameraTransform/code/warpedModel.frag"
+    ]
+}

@@ -44,6 +44,15 @@
             "exercises": [
                 "demos/starryNight"
             ]
+        },
+        {
+            "name": "Übung 4",
+            "id": "assignment04",
+            "exercises": [
+                "practical/dollyZoom",
+                "practical/cameraTransform",
+                "practical/viewFinder"
+            ]
         }
     ]
 }

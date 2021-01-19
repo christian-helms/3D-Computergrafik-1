@@ -1,0 +1,8 @@
+{
+    "name": "View Finder",
+    "type": "code",
+    "renderer": "ViewFinderRenderer",
+    "files": [
+        "source/exercises/practical/viewFinder/code/viewFinder.vert"
+    ]
+}

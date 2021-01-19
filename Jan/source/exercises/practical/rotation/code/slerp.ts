@@ -10,6 +10,7 @@ import { quat } from 'webgl-operate';
  */
 
 export function slerp(startQuat: quat, endQuat: quat, t: number): quat {
+    if (quat.equals(startQuat ,endQuat)) return startQuat;
     const outputQuat = quat.create();
     const alpha = Math.acos(Math.max(Math.min(1, quat.dot(startQuat, endQuat)), -1));
     const startFactor = Math.sin((1 - t)*alpha);

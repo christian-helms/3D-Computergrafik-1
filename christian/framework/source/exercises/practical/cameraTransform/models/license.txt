@@ -1,0 +1,13 @@
+Model Information:
+* title:	Clippy
+* source:	https://sketchfab.com/3d-models/clippy-ca17f6645abc469d8b848e397f871d98
+* author:	meliks (https://sketchfab.com/meliks)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clippy" (https://sketchfab.com/3d-models/clippy-ca17f6645abc469d8b848e397f871d98) by meliks (https://sketchfab.com/meliks) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+
+Changes made: Scaled, rotated, translated model. Changed metal material.

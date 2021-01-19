@@ -1,0 +1,9 @@
+{
+    "name": "Dolly-Zoom",
+    "type": "code",
+    "renderer": "DollyZoomRenderer",
+    "files": [
+        "source/exercises/practical/dollyZoom/code/getFov.ts",
+        "source/exercises/practical/dollyZoom/code/updateCamera.ts"
+    ]
+}
