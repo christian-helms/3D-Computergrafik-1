@@ -6,5 +6,5 @@
  */
 export function getFov(distance: number, width: number): number {
     // TODO: calculate the fov
-    return 45;
+    return 180 * Math.atan((width / 2) / distance) / Math.PI;
 }

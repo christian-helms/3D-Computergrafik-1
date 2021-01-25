@@ -1,6 +1,5 @@
 import {
     Camera,
-    mat4,
     vec3
 } from 'webgl-operate';
 
@@ -31,8 +30,10 @@ export function updateCamera(
 ): void {
     // use an exponential function to slow down movement when closer
     const slow = exp(interpolateFactor, 7);
+
     // and use smooth acceleration for moving
     const smooth = smoothstep(0, 1, slow);
+
 
     /**
      * Values you should use:
@@ -58,11 +59,19 @@ export function updateCamera(
 
     // TODO: set correct camera properties
     // center - the point the camera looks at
-    camera.center = vec3.fromValues(0, 0, 0);
+    camera.center = viewTarget;
     // eye - the camera's position
-    camera.eye = vec3.fromValues(0, 0, 1);
+    const dist = lerp(minDist, maxDist, smooth);
+    camera.eye = camera.center;
+    camera.eye[2] += 2* dist;
+    camera.up = camera.eye;
+    vec3.rotateX(camera.eye, camera.eye, camera.center, rotation.latitude);
+    vec3.rotateY(camera.eye, camera.eye, camera.center, rotation.longitude);
     // up - y axis of the camera
-    camera.up = vec3.fromValues(0, 1, 0);
+    camera.up[1] += 1;
+    vec3.rotateX(camera.up, camera.up, camera.center, rotation.latitude);
+    vec3.rotateY(camera.up, camera.up, camera.center, rotation.longitude);
+    vec3.subtract(camera.up, camera.up, camera.eye);
     // fovy - the camera's vertical field of view
-    camera.fovy = 45;
+    camera.fovy = getFov(dist, focalWidth);
 }
