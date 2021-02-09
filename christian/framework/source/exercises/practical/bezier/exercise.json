@@ -1,0 +1,9 @@
+{
+    "name": "Bezierkurven",
+    "type": "code",
+    "renderer": "BezierRenderer",
+    "files": [
+        "source/exercises/practical/bezier/code/bezier.ts",
+        "source/exercises/practical/bezier/code/types.ts"
+    ]
+}

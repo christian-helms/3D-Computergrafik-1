@@ -1,5 +1,6 @@
 import {
     Camera,
+    mat4,
     vec3
 } from 'webgl-operate';
 
@@ -8,6 +9,7 @@ import { exp } from './exp';
 import { getFov } from './getFov';
 import { lerp } from './lerp';
 import { smoothstep } from './smoothstep';
+import { sign } from 'webgl-operate/lib/gl-matrix-extensions';
 
 /**
  * Configures the camera.
@@ -27,51 +29,27 @@ export function updateCamera(
     interpolateFactor: number,
     focalWidth: number,
     camera: Camera,
+    maxRotation: Rotation,
+    dollyZoomOn: boolean
 ): void {
     // use an exponential function to slow down movement when closer
     const slow = exp(interpolateFactor, 7);
-
     // and use smooth acceleration for moving
     const smooth = smoothstep(0, 1, slow);
-
-
-    /**
-     * Values you should use:
-     *
-     * viewTarget: Based on the selected model, this variable contains the
-     * scene's point of interest.
-     *
-     * rotation: Camera rotation. Uses a longitude/latitude system,
-     * with values being stored as radians.
-     *
-     * smooth: Contains a "better" version of the interpolationFactor,
-     * which makes the animation look smoother. It is recommended to use
-     * this instead of the default interpolation factor.
-     *
-     * minDist: Minimum distance from the viewTarget (when the
-     * interpolation factor is 0).
-     *
-     * maxDist: Maximum distance from the viewTarget (when the
-     * interpolation factor is 1).
-     *
-     * focalWidth: Size of the area that's in focus.
-     */
-
-    // TODO: set correct camera properties
     // center - the point the camera looks at
-    camera.center = viewTarget;
+    camera.center = viewTarget;// vec3.fromValues(1.5,2,0);
     // eye - the camera's position
-    const dist = lerp(minDist, maxDist, smooth);
-    camera.eye = camera.center;
-    camera.eye[2] += 2* dist;
-    camera.up = camera.eye;
-    vec3.rotateX(camera.eye, camera.eye, camera.center, rotation.latitude);
+    camera.eye = vec3.fromValues(camera.center[0], camera.center[1], camera.center[2] + lerp(minDist, maxDist, smooth));
+    vec3.rotateX(camera.eye, camera.eye, camera.center, (Math.abs(rotation.latitude) < Math.PI / 2 - 0.001) ? rotation.latitude : Math.sign(rotation.latitude) * (Math.PI / 2 - 0.001));
     vec3.rotateY(camera.eye, camera.eye, camera.center, rotation.longitude);
+    vec3.rotateY(camera.eye, camera.eye, camera.center, lerp(maxRotation.longitude, 0, smooth));
+
     // up - y axis of the camera
-    camera.up[1] += 1;
-    vec3.rotateX(camera.up, camera.up, camera.center, rotation.latitude);
-    vec3.rotateY(camera.up, camera.up, camera.center, rotation.longitude);
-    vec3.subtract(camera.up, camera.up, camera.eye);
-    // fovy - the camera's vertical field of view
-    camera.fovy = getFov(dist, focalWidth);
+    const distvector = vec3.fromValues(0, 0, 0);
+    vec3.subtract(distvector, camera.eye, camera.center);
+    const helpvector = vec3.fromValues(-distvector[2], 0, distvector[0]);
+    vec3.cross(camera.up, helpvector, distvector);
+    vec3.normalize(camera.up, camera.up);
+
+    camera.fovy = dollyZoomOn ? getFov(vec3.len(distvector), focalWidth) : 45;
 }

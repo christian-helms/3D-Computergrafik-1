@@ -1,0 +1,8 @@
+{
+    "name": "Soft Shading",
+    "type": "code",
+    "renderer": "SoftShadingRenderer",
+    "files": [
+        "source/exercises/practical/softShading/code/halfEdgeModel.ts"
+    ]
+}

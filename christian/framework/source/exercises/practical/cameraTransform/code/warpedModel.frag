@@ -75,9 +75,7 @@ vec3 getNormal()
 bool shouldBeClipped(vec4 pos)
 {
     pos = pos / pos.w;
-    if (any(greaterThan(abs(pos), vec4(1.0))))
-        return true;
-    return false;
+    return any(greaterThan(abs(pos), vec4(1.0, 1.0, 1.0, 2.0)));
 }
 
 void main(void)

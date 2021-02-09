@@ -47,9 +47,11 @@ export function getLookAt(camera: Camera): mat4 {
 export function getAngleAdjustment(camera: Camera): mat4 {
     const out = mat4.create();
     // unfortunately camera.fovx is not set
-    const fovx = camera.fovy * camera.aspect;
-    const width_angle = 2 * Math.PI * (fovx / 360);
     const height_angle = 2 * Math.PI * (camera.fovy / 360);
+    const height = 2 * camera.near * Math.tan(height_angle / 2);
+    const width = height * camera.aspect;
+    const width_angle = 2 * Math.atan((width / 2) / camera.near);
+
     const scale_vector = vec3.fromValues(
         1.0 / Math.tan(width_angle / 2.0),
         1.0 / Math.tan(height_angle / 2.0),

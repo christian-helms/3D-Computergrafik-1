@@ -53,6 +53,15 @@
                 "practical/cameraTransform",
                 "practical/viewFinder"
             ]
+        },
+        {
+            "name": "Übung 5",
+            "id": "assignment05",
+            "exercises": [
+                "practical/softShading",
+                "practical/heightmap",
+                "practical/bezier"
+            ]
         }
     ]
 }

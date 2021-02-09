@@ -1,0 +1,10 @@
+{
+    "name": "Heightmap",
+    "type": "code",
+    "renderer": "HeightmapRenderer",
+    "files": [
+        "source/exercises/practical/heightmap/code/heightmap.ts",
+        "source/exercises/practical/heightmap/code/heightmap.vert",
+        "source/exercises/practical/heightmap/code/heightmap.frag"
+    ]
+}

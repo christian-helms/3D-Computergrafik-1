@@ -18,6 +18,7 @@ import { ModelPass } from './modelPass';
 import { Rotation } from './rotation';
 import { clamp } from './clamp';
 import { updateCamera } from './updateCamera';
+import { RotationRenderer } from '../../rotation/code/rotation';
 export class DollyZoomRenderer extends Renderer {
     protected readonly _altered = Object.assign(new ChangeLookup(), {
         any: false,
@@ -66,6 +67,8 @@ export class DollyZoomRenderer extends Renderer {
     protected _focalWidth = 0;
     protected _minDist = 0;
     protected _maxDist = 0;
+    protected _maxRot: Rotation = { longitude: 0, latitude: 0 };
+    protected _dollyZoomOn = true;
 
     protected onMouseDown(events: Array<MouseEvent>): void {
         const event = events[events.length - 1];
@@ -154,6 +157,9 @@ export class DollyZoomRenderer extends Renderer {
             }
         });
 
+        const dollyZoomOn = this._controls.createActionButton('Dolly-Zoom On/Off');
+        dollyZoomOn.addEventListener('click', () => { this._dollyZoomOn = !this._dollyZoomOn; });
+
         // focal plane width
         const widthInput = this._controls.createSliderInput(
             'Größe des Fokusbereichs', undefined, 2, undefined, 0.5, 5, 0.05);
@@ -183,6 +189,16 @@ export class DollyZoomRenderer extends Renderer {
             this.invalidate();
         });
         this._maxDist = Number(maxDistInput.value);
+
+        // maximum latitude rotation
+        const maxLatInput = this._controls.createSliderInput(
+            'maximale Längengrad-Rotation', undefined, 0, undefined, -Math.PI, Math.PI, Math.PI / 100);
+        maxLatInput.addEventListener('input', () => {
+            this._maxRot.longitude = Number(maxLatInput.value);
+            this._altered.alter('camera');
+            this.invalidate();
+        });
+        this._maxRot.longitude = Number(maxLatInput.value);
 
         this._altered.alter('camera');
     }
@@ -282,7 +298,9 @@ export class DollyZoomRenderer extends Renderer {
                 this._maxDist,
                 this._interpolateFactor,
                 this._focalWidth,
-                this._camera
+                this._camera,
+                this._maxRot,
+                this._dollyZoomOn
             );
         }
 

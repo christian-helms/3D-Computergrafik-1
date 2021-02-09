@@ -1,0 +1,58 @@
+{
+    "lecture": "Übungen 3D-Computergrafik I",
+    "assignments": [
+        {
+            "name": "Übung 3",
+            "id": "assignment03",
+            "exercises": [
+                "theory/transformationMatrix",
+                "practical/globalDeformation",
+                "practical/rotation"
+            ]
+        },
+        {
+            "name": "Übung 2",
+            "id": "assignment02",
+            "exercises": [
+                "practical/rasterization",
+                "practical/rasterizePerformance",
+                "practical/colorLut",
+                "practical/xmasTree"
+            ]
+        },
+        {
+            "name": "Übung 1",
+            "id": "assignment01",
+            "exercises": [
+                "practical/grayscale",
+                "practical/cpuGpu",
+                "practical/metaballs"
+            ]
+        },
+        {
+            "name": "Intro",
+            "id": "demo01",
+            "exercises": [
+                "demos/tsIntro",
+                "demos/tsGlslIntro",
+                "demos/glslIntro"
+            ]
+        },
+        {
+            "name": "Live-Coding 08.12.",
+            "id": "demo02",
+            "exercises": [
+                "demos/starryNight"
+            ]
+        },
+        {
+            "name": "Übung 4",
+            "id": "assignment04",
+            "exercises": [
+                "practical/dollyZoom",
+                "practical/cameraTransform",
+                "practical/viewFinder"
+            ]
+        }
+    ]
+}
